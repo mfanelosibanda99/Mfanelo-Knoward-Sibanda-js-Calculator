@@ -1,0 +1,151 @@
+
+:root {
+  --blue: #324361;
+  --dark-blue: #283d66;
+  --blue-light: #dbe8ff;
+  --white: #ffffff;
+  --black: #151515;
+  --orange: #ff9500;
+  --gray: #8a94a6;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--blue-light);
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+
+.Calculator {
+  display: flex;
+  flex-direction: column;
+  height: min(900px, 90vh);
+  aspect-ratio: 500 / 900;
+  background: var(--white);
+  border: 2px solid var(--blue);
+  border-radius: 20px;
+  padding: 18px 18px 28px;
+  box-shadow: 0 20px 40px rgba(11, 63, 168, 0.35);
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:#0d1b3d
+}
+
+.app-header {
+  text-align: center;
+}
+
+.app-header h1 {
+  color: var(--blue);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+
+.display {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 4px 0 40px;           
+  padding: 4px 6px;
+  background: #0d1b3d;          
+  border: 2px solid var(--blue-light);
+  border-radius: 22px;
+  box-shadow: inset 0 4px 14px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+ 
+
+.history {
+  min-height: 20px;
+  max-width: 100%;
+  font-size: 1.15rem;
+  color: #8fb3ff;               
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+ 
+
+.current {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--white);
+  max-width: 100%;
+  word-break: break-all;
+  text-align: right;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 12px;
+  height: 62%;
+}
+
+
+.btn {
+  border: none;
+  border-radius: 24px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--white);
+  cursor: pointer;
+  transition: transform 0.1s, filter 0.15s;
+}
+
+.btn:hover {
+  filter: brightness(1.12);
+}
+
+.btn:active {
+  transform: scale(0.94);
+}
+
+
+.wide {
+  grid-column: span 2;
+}
+
+
+.number {
+  background: var(--black);
+}
+
+
+.operator {
+  background: var(--orange);
+  font-size: 1.9rem;
+}
+
+
+.clear,
+.percent,
+.delete {
+  background: var(--blue-light);
+  color: var(--blue-dark);
+}
+
+
+.equals {
+  background: #0d1b3d;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
